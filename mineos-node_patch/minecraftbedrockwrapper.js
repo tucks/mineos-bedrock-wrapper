@@ -22,7 +22,7 @@ exports.profile = {
       item['downloaded'] = fs.existsSync(path.join(profile_dir, item.id, item.filename));
       item['version'] = 0;
       item['release_version'] = '';
-      item['url'] = 'http://192.168.1.119/mineoswrapper/mineos-bedrock-wrapper-1.0-SNAPSHOT.jar';
+      item['url'] = 'https://github.com/tucks/mineos-bedrock-wrapper/blob/master/download/latest/mineos-bedrock-wrapper-1.0-SNAPSHOT.jar';
 
       p.push(item);	
     } catch (e) { }
