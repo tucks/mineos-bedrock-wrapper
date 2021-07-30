@@ -1,0 +1,34 @@
+--- profiles.js.orig	2021-07-29 20:32:10.868838241 +0100
++++ profiles.js	2021-07-30 19:07:08.508679292 +0100
+@@ -648,4 +648,31 @@
+       callback(null, p);
+     } //end handler
+   },
++  mineosbedrockwrapper: {
++    name: 'MineOS Bedrock Wrapper',
++    handler: function(profile_dir, callback) {
++      var p = [];
++
++      try {
++        var item = {};
++
++        item['id'] = 'mineos-bedrock-wrapper';
++        item['time'] = new Date().getTime();
++        item['releaseTime'] = new Date().getTime();
++        item['type'] = 'release';
++        item['group'] = 'mineosbedrockwrapper';
++        item['webui_desc'] = 'MineOS Bedrock Wrapper';
++        item['weight'] = 0;
++        item['filename'] = 'mineos-bedrock-wrapper-1.0-SNAPSHOT.jar';
++        item['downloaded'] = fs.existsSync(path.join(profile_dir, item.id, item.filename));
++        item['version'] = 0;
++        item['release_version'] = '';
++        item['url'] = 'http://192.168.1.119/mineoswrapper/mineos-bedrock-wrapper-1.0-SNAPSHOT.jar';
++
++        p.push(item);
++      } catch (e) {}
++
++      callback(null, p);
++    } //end handler
++  },
+ };
